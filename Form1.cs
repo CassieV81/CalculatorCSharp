@@ -32,163 +32,63 @@ namespace Calculator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (result != null || currentOutput == null)
-            {
-                currentOutput = result;
-                currentInput += button1.Text;
-                textBox1.Text = currentInput;
-                PerformOperation(currentInput, currentOutput, currentOperator);
-            }
-            else
-            {
-                currentInput += button1.Text;
-                textBox1.Text = currentInput;
-            }
+            currentInput += button1.Text;
+            textBox1.Text = currentInput;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (result != null || currentOutput == null)
-            {
-                currentOutput = result;
-                currentInput += button2.Text;
-                textBox1.Text = currentInput;
-                PerformOperation(currentInput, currentOutput, currentOperator);
-            }
-            else
-            {
-                currentInput += button2.Text;
-                textBox1.Text = currentInput;
-            }
+            currentInput += button2.Text;
+            textBox1.Text = currentInput;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (result != null || currentOutput == null)
-            {
-                currentOutput = result;
-                currentInput += button3.Text;
-                textBox1.Text = currentInput;
-                PerformOperation(currentInput, currentOutput, currentOperator);
-            }
-            else
-            {
-                currentInput += button3.Text;
-                textBox1.Text = currentInput;
-            }
+            currentInput += button3.Text;
+            textBox1.Text = currentInput;    
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (result != null || currentOutput == null)
-            {
-                currentOutput = result;
-                currentInput += button4.Text;
-                textBox1.Text = currentInput;
-                PerformOperation(currentInput, currentOutput, currentOperator);
-            }
-            else
-            {
-                currentInput += button4.Text;
-                textBox1.Text = currentInput;
-            }
+            currentInput += button4.Text;
+            textBox1.Text = currentInput;  
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if (result != null || currentOutput == null)
-            {
-                currentOutput = result;
-                currentInput += button5.Text;
-                textBox1.Text = currentInput;
-                PerformOperation(currentInput, currentOutput, currentOperator);
-            }
-            else
-            {
-                currentInput += button5.Text;
-                textBox1.Text = currentInput;
-            }
+            currentInput += button5.Text;
+            textBox1.Text = currentInput;  
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            if (result != null || currentOutput == null)
-            {
-                currentOutput = result;
-                currentInput += button6.Text;
-                textBox1.Text = currentInput;
-                PerformOperation(currentInput, currentOutput, currentOperator);
-            }
-            else
-            {
-                currentInput += button6.Text;
-                textBox1.Text = currentInput;
-            }
+            currentInput += button6.Text;
+            textBox1.Text = currentInput; 
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            if (result != null || currentOutput == null)
-            {
-                currentOutput = result;
-                currentInput += button7.Text;
-                textBox1.Text = currentInput;
-                PerformOperation(currentInput, currentOutput, currentOperator);
-            }
-            else
-            {
-                currentInput += button7.Text;
-                textBox1.Text = currentInput;
-            }
+            currentInput += button7.Text;
+            textBox1.Text = currentInput;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (result != null || currentOutput == null)
-            {
-                currentOutput = result;
-                currentInput += button8.Text;
-                textBox1.Text = currentInput;
-                PerformOperation(currentInput, currentOutput, currentOperator);
-            }
-            else
-            {
-                currentInput += button8.Text;
-                textBox1.Text = currentInput;
-            }
+            currentInput += button8.Text;
+            textBox1.Text = currentInput;
+            
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            
-            if (result != null || currentOutput == null)
-            {
-                currentOutput = result;
-                currentInput += button9.Text;
-                textBox1.Text = currentInput;
-                PerformOperation(currentInput, currentOutput, currentOperator);
-            }
-            else
-            {
-                currentInput += button9.Text;
-                textBox1.Text = currentInput;
-            }
+            currentInput += button9.Text;
+            textBox1.Text = currentInput; 
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (result != null || currentOutput == null)
-            {
-                currentOutput = result;
-                currentInput += button10.Text;
-                textBox1.Text = currentInput;
-                PerformOperation(currentInput, currentOutput, currentOperator);
-            }
-            else
-            {
-                currentInput += button10.Text;
-                textBox1.Text = currentInput;
-            }
+            currentInput += button10.Text;
+            textBox1.Text = currentInput;       
         }
 
         private void button11_Click(object sender, EventArgs e)
@@ -207,13 +107,26 @@ namespace Calculator
                 PerformOperation(currentInput, currentOutput, currentOperator);
                 textBox1.Text = result;
                 currentInput = "";
+                currentOutput = "";
                 currentOperator = '+';
             }
             else
             {
-                currentOutput = currentInput;
-                currentInput = "";
-                currentOperator = '+';
+                if (result != null || currentOutput == null)
+                {
+                    textBox1.Text = result;
+                    currentOutput = result;
+                    PerformOperation(currentInput, currentOutput, currentOperator);
+                    currentOperator = '+';
+                    currentInput = "";
+                    textBox1.Text = result;
+                }
+                else
+                {
+                    currentOutput = currentInput;
+                    currentInput = "";
+                    currentOperator = '+';
+                }
             }
         }
 
@@ -225,13 +138,26 @@ namespace Calculator
                 PerformOperation(currentInput, currentOutput, currentOperator);
                 textBox1.Text = result;
                 currentInput = "";
+                currentOutput = "";
                 currentOperator = '-';
             }
             else
             {
-                currentOutput = currentInput;
-                currentInput = "";
-                currentOperator = '-';
+                if (result != null || currentOutput == null)
+                {
+                    textBox1.Text = result;
+                    currentOutput = result;
+                    PerformOperation(currentInput, currentOutput, currentOperator);
+                    currentOperator = '-';
+                    currentInput = "";
+                    textBox1.Text = result;
+                }
+                else
+                {
+                    currentOutput = currentInput;
+                    currentInput = "";
+                    currentOperator = '-';
+                }
             }
         }
 
@@ -243,13 +169,26 @@ namespace Calculator
                 PerformOperation(currentInput, currentOutput, currentOperator);
                 textBox1.Text = result;
                 currentInput = "";
+                currentOutput = "";
                 currentOperator = '/';
             }
             else
             {
-                currentOutput = currentInput;
-                currentInput = "";
-                currentOperator = '/';
+                if (result != null || currentOutput == null)
+                {
+                    textBox1.Text = result;
+                    currentOutput = result;
+                    PerformOperation(currentInput, currentOutput, currentOperator);
+                    currentOperator = '/';
+                    currentInput = "";
+                    textBox1.Text = result;
+                }
+                else
+                {
+                    currentOutput = currentInput;
+                    currentInput = "";
+                    currentOperator = '/';
+                }
             }
         }
 
@@ -261,18 +200,32 @@ namespace Calculator
                 PerformOperation(currentInput, currentOutput, currentOperator);
                 textBox1.Text = result;
                 currentInput = "";
+                currentOutput = "";
                 currentOperator = '*';
             }
             else
             {
-                currentOutput = currentInput;
-                currentInput = "";
-                currentOperator = '*';
+                if (result != null || currentOutput == null)
+                {
+                    textBox1.Text = result;
+                    currentOutput = result;
+                    PerformOperation(currentInput, currentOutput, currentOperator);
+                    currentOperator = '*';
+                    currentInput = "";
+                    textBox1.Text = result;
+                }
+                else
+                {
+                    currentOutput = currentInput;
+                    currentInput = "";
+                    currentOperator = '*';
+                }
             }
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
+            if (result != null) currentOutput = result;
             PerformOperation(currentInput, currentOutput, currentOperator);
             textBox1.Text = result;
         }
