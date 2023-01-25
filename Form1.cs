@@ -101,7 +101,25 @@ namespace Calculator
 
         private void button13_Click(object sender, EventArgs e)
         {
-            if (currentOutput != "")
+            if (currentOutput == "")
+            {
+                if (result != null)
+                {
+                    currentOutput = result;
+                    PerformOperation(currentInput, currentOutput, currentOperator);
+                    textBox1.Text = result;
+                    currentInput = "";
+                    currentOutput = "";
+                    currentOperator = '+';
+                }
+                else
+                {
+                    currentOutput = currentInput;
+                    currentInput = "";
+                    currentOperator = '+';
+                }
+            }
+            else
             {
                 if (result != null) textBox1.Text = result;
                 PerformOperation(currentInput, currentOutput, currentOperator);
@@ -110,29 +128,29 @@ namespace Calculator
                 currentOutput = "";
                 currentOperator = '+';
             }
-            else
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            if (currentOutput == "")
             {
-                if (result != null || currentOutput == null)
+                if (result != null)
                 {
-                    textBox1.Text = result;
                     currentOutput = result;
                     PerformOperation(currentInput, currentOutput, currentOperator);
-                    currentOperator = '+';
-                    currentInput = "";
                     textBox1.Text = result;
+                    currentInput = "";
+                    currentOutput = "";
+                    currentOperator = '-';
                 }
                 else
                 {
                     currentOutput = currentInput;
                     currentInput = "";
-                    currentOperator = '+';
+                    currentOperator = '-';
                 }
             }
-        }
-
-        private void button14_Click(object sender, EventArgs e)
-        {
-            if (currentOutput != "")
+            else
             {
                 if (result != null) textBox1.Text = result;
                 PerformOperation(currentInput, currentOutput, currentOperator);
@@ -141,29 +159,29 @@ namespace Calculator
                 currentOutput = "";
                 currentOperator = '-';
             }
-            else
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            if (currentOutput == "")
             {
-                if (result != null || currentOutput == null)
+                if (result != null)
                 {
-                    textBox1.Text = result;
                     currentOutput = result;
                     PerformOperation(currentInput, currentOutput, currentOperator);
-                    currentOperator = '-';
-                    currentInput = "";
                     textBox1.Text = result;
+                    currentInput = "";
+                    currentOutput = "";
+                    currentOperator = '/';
                 }
                 else
                 {
                     currentOutput = currentInput;
                     currentInput = "";
-                    currentOperator = '-';
+                    currentOperator = '/';
                 }
             }
-        }
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            if (currentOutput != "")
+            else
             {
                 if (result != null) textBox1.Text = result;
                 PerformOperation(currentInput, currentOutput, currentOperator);
@@ -172,29 +190,29 @@ namespace Calculator
                 currentOutput = "";
                 currentOperator = '/';
             }
-            else
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            if (currentOutput == "")
             {
-                if (result != null || currentOutput == null)
+                if (result != null)
                 {
-                    textBox1.Text = result;
                     currentOutput = result;
                     PerformOperation(currentInput, currentOutput, currentOperator);
-                    currentOperator = '/';
-                    currentInput = "";
                     textBox1.Text = result;
+                    currentInput = "";
+                    currentOutput = "";
+                    currentOperator = '*';
                 }
                 else
                 {
                     currentOutput = currentInput;
                     currentInput = "";
-                    currentOperator = '/';
+                    currentOperator = '*';
                 }
             }
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-            if (currentOutput != "")
+            else
             {
                 if (result != null) textBox1.Text = result;
                 PerformOperation(currentInput, currentOutput, currentOperator);
@@ -202,24 +220,6 @@ namespace Calculator
                 currentInput = "";
                 currentOutput = "";
                 currentOperator = '*';
-            }
-            else
-            {
-                if (result != null || currentOutput == null)
-                {
-                    textBox1.Text = result;
-                    currentOutput = result;
-                    PerformOperation(currentInput, currentOutput, currentOperator);
-                    currentOperator = '*';
-                    currentInput = "";
-                    textBox1.Text = result;
-                }
-                else
-                {
-                    currentOutput = currentInput;
-                    currentInput = "";
-                    currentOperator = '*';
-                }
             }
         }
 
